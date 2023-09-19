@@ -25,3 +25,18 @@ You can see the results of your tests online in the "Actions" tab of your reposi
 ## Assignment Submission
 
 When you finish the assignment each day, make a new pull request from your daily challenge branch to your master branch and submit the PR URL in Canvas. You can submit a link to a pull request even if the pull request is closed.
+
+
+# Challenge Title: 01
+<!-- Description of the challenge -->
+Write a function called reverseArray which takes an array as an argument. Without utilizing any of the built-in methods available to your language, return an array with elements in reversed order.
+## Whiteboard Process
+<!-- Embedded whiteboard image -->
+(![Whiteboard](IMG_1013.jpg))
+
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+Did it on the original array. 
+## Solution
+<!-- Show how to run your code, and examples of it in action -->
+...
