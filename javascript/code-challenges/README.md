@@ -40,3 +40,23 @@ Did it on the original array.
 ## Solution
 <!-- Show how to run your code, and examples of it in action -->
 ...
+
+
+
+# Challenge Title: 02
+<!-- Description of the challenge -->
+Write a function called insertShiftArray which takes in an array and a value to be added. Without utilizing any of the built-in methods available to your language, return an array with the new value added at the middle index.## Whiteboard Process
+<!-- Embedded whiteboard image -->
+![Whiteboard](images/IMG_1021.jpg)
+
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+0(n) and I approached it without using any built-in methods
+## Solution
+<!-- Show how to run your code, and examples of it in action -->
+...
+
+
+
+
+
