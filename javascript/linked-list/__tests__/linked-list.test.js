@@ -62,4 +62,73 @@ describe('Testing the Linked List class', () => {
 
     expect(linkedList.toString()).toEqual('{ d } -> { c } -> { b } -> { a } -> NULL');
   });
+  test('Can successfully add a node to the end of the linked list', () => {
+    const list = new LinkedList();
+    list.append(1);
+    list.append(2);
+    list.append(3);
+
+    expect(list.head.value).toEqual(1);
+    expect(list.head.next.value).toEqual(2);
+    expect(list.head.next.next.value).toEqual(3);
+    expect(list.head.next.next.next).toBeNull();
+  });
+  test('Can successfully insert a node before a node located in the middle of a linked list', () => {
+    const list = new LinkedList();
+    list.append('a');
+    list.append('b');
+    list.append('c');
+    list.append('d');
+
+    expect(list.toString()).toEqual('{ a } -> { b } -> { c } -> { d } -> NULL');
+    list.insertBefore('c', 'l');
+    expect(list.toString()).toEqual('{ a } -> { b } -> { l } -> { c } -> { d } -> NULL');
+  });
+
+  test('Can successfully add multiple nodes to the end of a linked list', () => {
+    const list = new LinkedList();
+    list.append('a');
+    list.append('b');
+    list.append('c');
+    list.append('d');
+
+    expect(list.toString()).toEqual('{ a } -> { b } -> { c } -> { d } -> NULL');
+    list.insertAfter('e', 'f');
+    list.insertAfter('f', 'g');
+    expect(list.toString()).toEqual('{ a } -> { b } -> { c } -> { d } -> { e } -> { f } -> { g } -> NULL');
+  });
+  test('Can successfully insert a node before the first node of a linked list', () => {
+    const list = new LinkedList();
+    list.append('a');
+    list.append('b');
+    list.append('c');
+    list.append('d');
+
+    expect(list.toString()).toEqual('{ a } -> { b } -> { c } -> { d } -> NULL');
+    list.insertBefore('a', 'l');
+    expect(list.toString()).toEqual('{ l } -> { a } -> { b } -> { c } -> { d } -> NULL');
+  });
+  test('Can successfully insert after a node in the middle of the linked list', () => {
+    const list = new LinkedList();
+    list.append('a');
+    list.append('b');
+    list.append('c');
+    list.append('d');
+
+    expect(list.toString()).toEqual('{ a } -> { b } -> { c } -> { d } -> NULL');
+    list.insertAfter('b', 'l');
+    expect(list.toString()).toEqual('{ a } -> { b } -> { l } -> { c } -> { d } -> NULL');
+  });
+  test('Can successfully insert a node after the last node of the linked list', () => {
+    const list = new LinkedList();
+    list.append('a');
+    list.append('b');
+    list.append('c');
+    list.append('d');
+
+    expect(list.toString()).toEqual('{ a } -> { b } -> { c } -> { d } -> NULL');
+    list.insertAfter('d', 'l');
+    expect(list.toString()).toEqual('{ a } -> { b } -> { c } -> { d } -> { l } -> NULL');
+  });
+
 });
