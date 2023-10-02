@@ -1,6 +1,6 @@
-const Stack = require('../index.js');
-const Queue = require('../index.js');
-// const Node = require('../stack-and-queue').Node;
+const {Stack, Queue, Node} = require('../index.js');
+//const Queue = require('../index.js');
+//const Node = require('../stack-and-queue').Node;
 
 describe('Stack', () => {
   let stack;
@@ -30,9 +30,12 @@ describe('Stack', () => {
   it('Can successfully empty a stack after multiple pops', () => {
     stack.push('X');
     stack.push('Y');
-    stack.pop();
-    stack.pop();
-    expect(stack.isEmpty()).toBe(true);
+    // stack.pop();
+    // stack.pop();
+    expect(stack.pop()).toEqual('Y');
+    expect(stack.pop()).toEqual('X');
+
+    expect(stack.isEmpty()).toEqual(true);
   });
 
   it('Can successfully peek the next item on the stack', () => {

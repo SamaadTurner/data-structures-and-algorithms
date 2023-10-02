@@ -19,9 +19,14 @@ class Stack {
     if(this.isEmpty()){
       throw new Error('Stack is empty');
     }
-    let top = this.top;
+    let oldTop = this.top.value;
+
     this.top = this.top.next;
-    return top.value;
+    if (!this.top) {
+      // If the stack is now empty, update this.rear to null as well
+      this.rear = null;
+    }
+    return oldTop;
   }
   peek (){
     if(this.isEmpty()){
@@ -31,7 +36,11 @@ class Stack {
     return this.top.value;
   }
   isEmpty(){
-    return this.top === null;
+
+    // console.log('TOP: ', this.top);
+
+
+    return !this.top; // === null;
   }
 }
 
@@ -42,7 +51,7 @@ class Queue {
   }
   enqueue(value){
     let newNode = new Node(value);
-    if(this.front){
+    if(!this.front){
       this.front = newNode;
       this.rear = newNode;
     } else {
@@ -51,7 +60,7 @@ class Queue {
     }
   }
   dequeue(){
-    if(this.front){
+    if(!this.front){
       throw new Error('Queue is empty');
     }
     const frontValue = this.front.value;
@@ -63,7 +72,7 @@ class Queue {
     return frontValue;
   }
   peek(){
-    if(this.front){
+    if(!this.front){
       throw new Error('Queue is empty therefore no peeking');
     }
     return this.front.value;
