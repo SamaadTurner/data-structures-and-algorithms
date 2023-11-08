@@ -1,6 +1,6 @@
 # Graphs:
 
-he graph should be represented as an adjacency list, and should include the following methods:
+The graph should be represented as an adjacency list, and should include the following methods:
 
 add vertex
 Arguments: value
